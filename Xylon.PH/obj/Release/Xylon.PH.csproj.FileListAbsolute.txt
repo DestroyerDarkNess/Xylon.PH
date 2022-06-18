@@ -1,0 +1,10 @@
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\obj\Release\Xylon.PH.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\obj\Release\Xylon.PH.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\obj\Release\ProcessHacker.Native.Ui.ChooseProcessDialog.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\obj\Release\ProcessHacker.Native.Ui.HandlePropertiesWindow.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\obj\Release\Xylon.PH.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\bin\Release\Xylon.PH.dll.config
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\bin\Release\Xylon.PH.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\bin\Release\Xylon.PH.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\obj\Release\Xylon.PH.dll
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\ProcessHacker-master\1.x\trunk\Xylon.PH\obj\Release\Xylon.PH.pdb

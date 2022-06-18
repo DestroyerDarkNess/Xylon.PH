@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3EAA62BD-AF8A-43A2-8751-6A2C7E3FD00E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xylon.PH</RootNamespace>
+    <AssemblyName>Xylon.PH</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Enums.cs" />
+    <Compile Include="Api\Extensions.cs" />
+    <Compile Include="Api\Functions.cs" />
+    <Compile Include="Api\HResult.cs" />
+    <Compile Include="Api\ISecurityInformation.cs" />
+    <Compile Include="Api\LsaDefinitions.cs" />
+    <Compile Include="Api\LsaEnums.cs" />
+    <Compile Include="Api\LsaFunctions.cs" />
+    <Compile Include="Api\LsaStructs.cs" />
+    <Compile Include="Api\NativeDefinitions.cs" />
+    <Compile Include="Api\NativeEnums.cs" />
+    <Compile Include="Api\NativeFunctions.cs" />
+    <Compile Include="Api\NativeStructs.cs" />
+    <Compile Include="Api\NtStatus.cs" />
+    <Compile Include="Api\SamDefinitions.cs" />
+    <Compile Include="Api\SamEnums.cs" />
+    <Compile Include="Api\SamFunctions.cs" />
+    <Compile Include="Api\SamStructs.cs" />
+    <Compile Include="Api\Structs.cs" />
+    <Compile Include="Api\Win32.cs" />
+    <Compile Include="Api\Win32Error.cs" />
+    <Compile Include="BaseConverter.cs" />
+    <Compile Include="ByteStreamReader.cs" />
+    <Compile Include="CircularBuffer.cs" />
+    <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Common\PhUtils.cs" />
+    <Compile Include="Cryptography.cs" />
+    <Compile Include="Debugging\DebugBuffer.cs" />
+    <Compile Include="Debugging\HeapInformation.cs" />
+    <Compile Include="Debugging\LockInformation.cs" />
+    <Compile Include="Debugging\ModuleInformation.cs" />
+    <Compile Include="DeltaManager.cs" />
+    <Compile Include="EnumComparer.cs" />
+    <Compile Include="FileUtils.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FreeList.cs" />
+    <Compile Include="IdGenerator.cs" />
+    <Compile Include="ILoadedModule.cs" />
+    <Compile Include="Image\ImageDirectoryEntry.cs" />
+    <Compile Include="Image\ImageExports.cs" />
+    <Compile Include="Image\ImageImports.cs" />
+    <Compile Include="Image\MappedImage.cs" />
+    <Compile Include="ImpersonationContext.cs" />
+    <Compile Include="IntPtrExtensions.cs" />
+    <Compile Include="Io\BeepDevice.cs" />
+    <Compile Include="Io\DiskDevice.cs" />
+    <Compile Include="Io\FileSystem.cs" />
+    <Compile Include="Io\MountManager.cs" />
+    <Compile Include="Io\StorageDevice.cs" />
+    <Compile Include="Ipc\IpcCircularBuffer.cs" />
+    <Compile Include="IResettable.cs" />
+    <Compile Include="KProcessHacker.cs" />
+    <Compile Include="LibC.cs" />
+    <Compile Include="LinkedList.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="Logging.cs" />
+    <Compile Include="Lpc\Port.cs" />
+    <Compile Include="Lpc\PortMessage.cs" />
+    <Compile Include="Memory\AlignedMemoryAlloc.cs" />
+    <Compile Include="Memory\Heap.cs" />
+    <Compile Include="Memory\LocalMemoryAlloc.cs" />
+    <Compile Include="Memory\LsaMemoryAlloc.cs" />
+    <Compile Include="Memory\MemoryAlloc.cs" />
+    <Compile Include="Memory\MemoryRegion.cs" />
+    <Compile Include="Memory\MemoryRegionStream.cs" />
+    <Compile Include="Memory\PebMemoryAlloc.cs" />
+    <Compile Include="Memory\PhysicalPages.cs" />
+    <Compile Include="Memory\PhysicalPagesMapping.cs" />
+    <Compile Include="Memory\PinnedObject.cs" />
+    <Compile Include="Memory\SamMemoryAlloc.cs" />
+    <Compile Include="Memory\Section.cs" />
+    <Compile Include="Memory\SectionView.cs" />
+    <Compile Include="Memory\VirtualMemoryAlloc.cs" />
+    <Compile Include="Memory\WtsMemoryAlloc.cs" />
+    <Compile Include="Messaging\Message.cs" />
+    <Compile Include="Messaging\MessageQueue.cs" />
+    <Compile Include="Messaging\MessageQueueListener.cs" />
+    <Compile Include="Mfs\Exceptions.cs" />
+    <Compile Include="Mfs\Internal.cs" />
+    <Compile Include="Mfs\MemoryDataWriteStream.cs" />
+    <Compile Include="Mfs\MemoryFileSystem.cs" />
+    <Compile Include="Mfs\MemoryObject.cs" />
+    <Compile Include="Mfs\MfsOpenMode.cs" />
+    <Compile Include="Mfs\MfsParameters.cs" />
+    <Compile Include="NativeBitmap.cs" />
+    <Compile Include="NativeObject.cs" />
+    <Compile Include="NativeTypeFactory.cs" />
+    <Compile Include="NativeUtils.cs" />
+    <Compile Include="NProcessHacker.cs" />
+    <Compile Include="Objects\BaseObject.cs" />
+    <Compile Include="Objects\DebugObjectHandle.cs" />
+    <Compile Include="Objects\DelayedReleasePool.cs" />
+    <Compile Include="Objects\DesktopHandle.cs" />
+    <Compile Include="Objects\DirectoryHandle.cs" />
+    <Compile Include="Objects\DriverHandle.cs" />
+    <Compile Include="Objects\EnlistmentHandle.cs" />
+    <Compile Include="Objects\EnvironmentBlock.cs" />
+    <Compile Include="Objects\EventHandle.cs" />
+    <Compile Include="Objects\EventPairHandle.cs" />
+    <Compile Include="Objects\FileHandle.cs" />
+    <Compile Include="Objects\HandleTable.cs" />
+    <Compile Include="Objects\Instances.cs" />
+    <Compile Include="Objects\IoCompletionHandle.cs" />
+    <Compile Include="Objects\IRefCounted.cs" />
+    <Compile Include="Objects\ISynchronizable.cs" />
+    <Compile Include="Objects\IWithToken.cs" />
+    <Compile Include="Objects\JobObjectHandle.cs" />
+    <Compile Include="Objects\KeyedEventHandle.cs" />
+    <Compile Include="Objects\KeyHandle.cs" />
+    <Compile Include="Objects\LsaAccountHandle.cs" />
+    <Compile Include="Objects\LsaAuthHandle.cs" />
+    <Compile Include="Objects\LsaHandle.cs" />
+    <Compile Include="Objects\LsaPolicyHandle.cs" />
+    <Compile Include="Objects\LsaSecretHandle.cs" />
+    <Compile Include="Objects\MailslotHandle.cs" />
+    <Compile Include="Objects\MutantHandle.cs" />
+    <Compile Include="Objects\NamedPipeHandle.cs" />
+    <Compile Include="Objects\NativeHandle.cs" />
+    <Compile Include="Objects\PortComHandle.cs" />
+    <Compile Include="Objects\PortHandle.cs" />
+    <Compile Include="Objects\PrivateNamespaceHandle.cs" />
+    <Compile Include="Objects\ProcessHandle.cs" />
+    <Compile Include="Objects\ProfileHandle.cs" />
+    <Compile Include="Objects\RemoteHandle.cs" />
+    <Compile Include="Objects\RemoteTokenHandle.cs" />
+    <Compile Include="Objects\ResourceManagerHandle.cs" />
+    <Compile Include="Objects\SamAliasHandle.cs" />
+    <Compile Include="Objects\SamDomainHandle.cs" />
+    <Compile Include="Objects\SamGroupHandle.cs" />
+    <Compile Include="Objects\SamHandle.cs" />
+    <Compile Include="Objects\SamServerHandle.cs" />
+    <Compile Include="Objects\SamUserHandle.cs" />
+    <Compile Include="Objects\SectionHandle.cs" />
+    <Compile Include="Objects\SecuredHandleTable.cs" />
+    <Compile Include="Objects\SemaphoreHandle.cs" />
+    <Compile Include="Objects\ServiceBaseHandle.cs" />
+    <Compile Include="Objects\ServiceHandle.cs" />
+    <Compile Include="Objects\ServiceManagerHandle.cs" />
+    <Compile Include="Objects\Settings.cs" />
+    <Compile Include="Objects\SymbolicLinkHandle.cs" />
+    <Compile Include="Objects\TerminalServerHandle.cs" />
+    <Compile Include="Objects\ThreadHandle.cs" />
+    <Compile Include="Objects\TimerHandle.cs" />
+    <Compile Include="Objects\TmHandle.cs" />
+    <Compile Include="Objects\TokenHandle.cs" />
+    <Compile Include="Objects\TokenWithLinkedToken.cs" />
+    <Compile Include="Objects\TransactionHandle.cs" />
+    <Compile Include="Objects\TypeObjectHandle.cs" />
+    <Compile Include="Objects\UserHandle.cs" />
+    <Compile Include="Objects\WindowHandle.cs" />
+    <Compile Include="Objects\WindowStationHandle.cs" />
+    <Compile Include="OSVersion.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\HandleProvider.cs" />
+    <Compile Include="Providers\IProvider.cs" />
+    <Compile Include="Providers\MemoryProvider.cs" />
+    <Compile Include="Providers\ModuleProvider.cs" />
+    <Compile Include="Providers\NetworkProvider.cs" />
+    <Compile Include="Providers\ProcessSystemProvider.cs" />
+    <Compile Include="Providers\Provider.cs" />
+    <Compile Include="Providers\ProviderThread.cs" />
+    <Compile Include="Providers\ServiceProvider.cs" />
+    <Compile Include="Providers\ThreadProvider.cs" />
+    <Compile Include="Searchers\HeapSearcher.cs" />
+    <Compile Include="Searchers\LiteralSearcher.cs" />
+    <Compile Include="Searchers\RegexSearcher.cs" />
+    <Compile Include="Searchers\Searcher.cs" />
+    <Compile Include="Searchers\SearchOptions.cs" />
+    <Compile Include="Searchers\StringSearcher.cs" />
+    <Compile Include="Searchers\StructSearcher.cs" />
+    <Compile Include="Security\AccessControl\Ace.cs" />
+    <Compile Include="Security\AccessControl\Acl.cs" />
+    <Compile Include="Security\AccessControl\KnownAce.cs" />
+    <Compile Include="Security\AccessControl\SecurityDescriptor.cs" />
+    <Compile Include="Security\AccessControl\SecurityEditor.cs" />
+    <Compile Include="Security\Authentication\Credentials.cs" />
+    <Compile Include="Security\Authentication\IAuthenticationPackage.cs" />
+    <Compile Include="Security\Authentication\Msv1_0_InteractivePackage.cs" />
+    <Compile Include="Security\DebugObjectAccess.cs" />
+    <Compile Include="Security\DesktopAccess.cs" />
+    <Compile Include="Security\DirectoryAccess.cs" />
+    <Compile Include="Security\EnlistmentAccess.cs" />
+    <Compile Include="Security\EventAccess.cs" />
+    <Compile Include="Security\EventPairAccess.cs" />
+    <Compile Include="Security\FileAccess.cs" />
+    <Compile Include="Security\FltPortAccess.cs" />
+    <Compile Include="Security\IoCompletionAccess.cs" />
+    <Compile Include="Security\ISecurable.cs" />
+    <Compile Include="Security\JobObjectAccess.cs" />
+    <Compile Include="Security\KeyAccess.cs" />
+    <Compile Include="Security\KeyedEventAccess.cs" />
+    <Compile Include="Security\LsaAccountAccess.cs" />
+    <Compile Include="Security\LsaPolicyAccess.cs" />
+    <Compile Include="Security\LsaSecretAccess.cs" />
+    <Compile Include="Security\LsaTrustedAccess.cs" />
+    <Compile Include="Security\MutantAccess.cs" />
+    <Compile Include="Security\PortAccess.cs" />
+    <Compile Include="Security\Privilege.cs" />
+    <Compile Include="Security\PrivilegeSet.cs" />
+    <Compile Include="Security\ProcessAccess.cs" />
+    <Compile Include="Security\ProfileAccess.cs" />
+    <Compile Include="Security\ResourceManagerAccess.cs" />
+    <Compile Include="Security\SamAliasAccess.cs" />
+    <Compile Include="Security\SamDomainAccess.cs" />
+    <Compile Include="Security\SamGroupAccess.cs" />
+    <Compile Include="Security\SamServerAccess.cs" />
+    <Compile Include="Security\SamUserAccess.cs" />
+    <Compile Include="Security\ScManagerAccess.cs" />
+    <Compile Include="Security\SectionAccess.cs" />
+    <Compile Include="Security\SemaphoreAccess.cs" />
+    <Compile Include="Security\ServiceAccess.cs" />
+    <Compile Include="Security\Sid.cs" />
+    <Compile Include="Security\StandardRights.cs" />
+    <Compile Include="Security\SymbolicLinkAccess.cs" />
+    <Compile Include="Security\ThreadAccess.cs" />
+    <Compile Include="Security\TimerAccess.cs" />
+    <Compile Include="Security\TmAccess.cs" />
+    <Compile Include="Security\TokenAccess.cs" />
+    <Compile Include="Security\TransactionAccess.cs" />
+    <Compile Include="Security\TypeObjectAccess.cs" />
+    <Compile Include="Security\WindowStationAccess.cs" />
+    <Compile Include="Settings\ISettingsStore.cs" />
+    <Compile Include="Settings\SettingDefaultAttribute.cs" />
+    <Compile Include="Settings\SettingsBase.cs" />
+    <Compile Include="Settings\VolatileSettingsStore.cs" />
+    <Compile Include="Settings\XmlFileSettingsStore.cs" />
+    <Compile Include="SharpDevelop\MTA2STA.cs" />
+    <Compile Include="SharpDevelop\NDebugger.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\Autogenerated\CorPublishClass.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\Autogenerated\CorpubPublish.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\Autogenerated\ICorPublish.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\Autogenerated\ICorPublishAppDomain.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\Autogenerated\ICorPublishAppDomainEnum.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\Autogenerated\ICorPublishEnum.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\Autogenerated\ICorPublishProcess.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\Autogenerated\ICorPublishProcessEnum.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\ICorPublish.cs" />
+    <Compile Include="SharpDevelop\Wrappers\CorPub\ICorPublishProcess.cs" />
+    <Compile Include="SharpDevelop\Wrappers\NativeMethods.cs" />
+    <Compile Include="SharpDevelop\Wrappers\ResourceManager.cs" />
+    <Compile Include="SharpDevelop\Wrappers\Util.cs" />
+    <Compile Include="SsLogging\FilterType.cs" />
+    <Compile Include="SsLogging\KphTypes.cs" />
+    <Compile Include="SsLogging\SsBytes.cs" />
+    <Compile Include="SsLogging\SsClientId.cs" />
+    <Compile Include="SsLogging\SsData.cs" />
+    <Compile Include="SsLogging\SsEvent.cs" />
+    <Compile Include="SsLogging\SsHandle.cs" />
+    <Compile Include="SsLogging\SsLogger.cs" />
+    <Compile Include="SsLogging\SsObjectAttributes.cs" />
+    <Compile Include="SsLogging\SsSimple.cs" />
+    <Compile Include="SsLogging\SsUnicodeString.cs" />
+    <Compile Include="String255.cs" />
+    <Compile Include="Structs\FieldType.cs" />
+    <Compile Include="Structs\FieldValue.cs" />
+    <Compile Include="Structs\IStructIOProvider.cs" />
+    <Compile Include="Structs\ProcessMemoryIO.cs" />
+    <Compile Include="Structs\StructDef.cs" />
+    <Compile Include="Structs\StructField.cs" />
+    <Compile Include="Structs\StructParser.cs" />
+    <Compile Include="Symbols\SymbolInformation.cs" />
+    <Compile Include="Symbols\SymbolProvider.cs" />
+    <Compile Include="Symbols\SymbolProviderExtensions.cs" />
+    <Compile Include="Symbols\SymbolResolveLevel.cs" />
+    <Compile Include="Threading\ActionSync.cs" />
+    <Compile Include="Threading\CurrentThread.cs" />
+    <Compile Include="Threading\Event.cs" />
+    <Compile Include="Threading\EventPair.cs" />
+    <Compile Include="Threading\FairResourceLock.cs" />
+    <Compile Include="Threading\FastEvent.cs" />
+    <Compile Include="Threading\FastLock.cs" />
+    <Compile Include="Threading\FastMutex.cs" />
+    <Compile Include="Threading\FastResourceLock.cs" />
+    <Compile Include="Threading\FastStack.cs" />
+    <Compile Include="Threading\Interlocked2.cs" />
+    <Compile Include="Threading\IResourceLock.cs" />
+    <Compile Include="Threading\KeyedEvent.cs" />
+    <Compile Include="Threading\Mutant.cs" />
+    <Compile Include="Threading\NativeMethods.cs" />
+    <Compile Include="Threading\NativeThreadPool.cs" />
+    <Compile Include="Threading\RundownProtection.cs" />
+    <Compile Include="Threading\Semaphore.cs" />
+    <Compile Include="Threading\SemaphorePair.cs" />
+    <Compile Include="Threading\SpinLock.cs" />
+    <Compile Include="Threading\ThreadTask.cs" />
+    <Compile Include="Threading\Timer.cs" />
+    <Compile Include="Threading\WaitableQueue.cs" />
+    <Compile Include="Threading\Waiter.cs" />
+    <Compile Include="Tokenizer.cs" />
+    <Compile Include="Ui\ChooseProcessDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\ChooseProcessDialog.Designer.cs">
+      <DependentUpon>ChooseProcessDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\ColumnHeaderExtensions.cs" />
+    <Compile Include="Ui\HandlePropertiesWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ui\HandlePropertiesWindow.Designer.cs">
+      <DependentUpon>HandlePropertiesWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ui\SortedListViewComparer.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="WeakReference.cs" />
+    <Compile Include="Windows.cs" />
+    <Compile Include="WindowsException.cs" />
+    <Compile Include="WorkQueue.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Ui\ChooseProcessDialog.resx">
+      <DependentUpon>ChooseProcessDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ui\HandlePropertiesWindow.resx">
+      <DependentUpon>HandlePropertiesWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SharpDevelop\LICENSE.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
